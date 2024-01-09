@@ -1,0 +1,90 @@
+*,*::before,*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.app {
+  max-width: 800px;
+  min-width: 400px;
+  margin: auto;
+  background-color: rgb(214, 226, 222);
+  color: rgb(7, 29, 19);
+}
+
+.curr-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.curr-weather {
+  width: 30%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: .5em;
+  border-right: 1px solid;
+}
+
+.curr-img {
+  width: 60%;
+}
+
+.curr-status {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: .5em 2em;
+}
+
+.card-container {
+  width: 100%;
+  padding: 1em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+  justify-content: center;
+}
+
+.daily-card {
+  border-radius: 1em;
+  box-shadow: 0 0 10px 1px rgb(70, 68, 68);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card-img {
+  width: 35%;
+}
+
+.hourly-table {
+  width: 100%;
+  text-align: center;
+  border-spacing: 0;
+}
+
+.hourly-row {
+  background-color: rgb(193, 214, 206);
+  box-shadow: 0 0 5px 1px rgb(70, 68, 68);
+  border-spacing: 0;
+}
+
+.hourly-row:nth-child(2n) {
+  background-color: rgb(162, 194, 182);
+}
+
+.hourly-row > td {
+  padding: .25em .5em;
+}
+
+.row-img {
+  width: 15%;
+  min-width: 30px;
+}
