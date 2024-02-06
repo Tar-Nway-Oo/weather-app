@@ -20,8 +20,8 @@ export default function Daily({daily}: DailyProps) {
         return(
           <div className="daily-card" key={day.time}>
             <img src={`./assets/${iconMap.get(day.weatherCode)}.svg`} alt={iconMap.get(day.weatherCode)} className="card-img" />
-            <p>{dayFormatter.format(day.time)}</p>
-            <p>{day.temp}&deg;C</p>
+            <p className="card-day">{dayFormatter.format(day.time)}</p>
+            <p>{day.temp}<span className="symbol">&deg;C</span></p>
           </div>
         )
       })}

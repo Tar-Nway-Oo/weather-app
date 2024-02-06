@@ -14,27 +14,30 @@ type CurrentProps = {
 }
 
 export default function Current({current}: CurrentProps) {
+
+  const {weatherCode, currentTemp, apparentTemp, windSpeed, precip} = current;
+
   return (
     <div className="curr-container">
       <div className="curr-weather">
-        <img src={`./assets/${iconMap.get(current.weatherCode)}.svg`} alt={iconMap.get(current.weatherCode)} className="curr-img" />
+        <img src={`./assets/${iconMap.get(weatherCode)}.svg`} alt={iconMap.get(weatherCode)} className="curr-img" />
       </div>
       <div className="curr-status">
          <div>
             <p>TEMP</p>
-            <p>{current.currentTemp}&deg;C</p>
+            <p>{currentTemp}<span className="symbol">&deg;C</span></p>
          </div>
          <div>
             <p>FL TEMP</p>
-            <p>{current.apparentTemp}&deg;C</p>
+            <p>{apparentTemp}<span className="symbol">&deg;C</span></p>
          </div>
          <div>
             <p>WIND</p>
-            <p>{current.windSpeed} mph</p>
+            <p>{windSpeed} <span className="symbol">mph</span></p>
          </div>
          <div>
             <p>PRECIP</p>
-            <p>{current.precip} in</p>
+            <p>{precip} <span className="symbol">in</span></p>
          </div>
       </div>
     </div>

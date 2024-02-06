@@ -12,12 +12,13 @@ body {
   max-width: 800px;
   min-width: 400px;
   margin: auto;
-  background-color: rgb(214, 226, 222);
-  color: rgb(7, 29, 19);
+  background-color: hsl(120, 30%, 90%);
+  color: hsl(120, 30%, 10%);
 }
 
 .curr-container {
   width: 100%;
+  border-bottom: 1px solid hsl(0, 0%, 80%);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -29,7 +30,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   gap: .5em;
-  border-right: 1px solid;
+  border-right: 1px solid hsl(0, 0%, 50%);
 }
 
 .curr-img {
@@ -39,7 +40,11 @@ body {
 .curr-status {
   display: grid;
   grid-template-columns: repeat(2, auto);
-  gap: .5em 2em;
+  gap: 1em 3em;
+}
+
+.symbol {
+  color: hsl(120, 10%, 20%);
 }
 
 .card-container {
@@ -52,8 +57,10 @@ body {
 }
 
 .daily-card {
-  border-radius: 1em;
-  box-shadow: 0 0 10px 1px rgb(70, 68, 68);
+  background-color: hsl(120, 0%, 90%);
+  border-radius: .5em;
+  padding: .25em;
+  box-shadow: 0 0 7px 1px hsl(0, 0%, 70%);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -64,6 +71,11 @@ body {
   width: 35%;
 }
 
+.card-day, .row-day {
+  font-size: 1.03rem;
+  margin-bottom: 0;
+}
+
 .hourly-table {
   width: 100%;
   text-align: center;
@@ -71,13 +83,13 @@ body {
 }
 
 .hourly-row {
-  background-color: rgb(193, 214, 206);
-  box-shadow: 0 0 5px 1px rgb(70, 68, 68);
+  background-color: hsl(120, 30%, 80%);
+  box-shadow: 0 0 7px 1px hsl(0, 0%, 50%);
   border-spacing: 0;
 }
 
 .hourly-row:nth-child(2n) {
-  background-color: rgb(162, 194, 182);
+  background-color: hsl(120, 30%, 70%);
 }
 
 .hourly-row > td {

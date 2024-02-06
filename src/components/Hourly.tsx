@@ -26,7 +26,7 @@ export default function Hourly({hourly}: HourlyProps) {
                return (
                   <tr className="hourly-row" key={hour.time}>
                <td>
-                  <p>{dayFormatter.format(hour.time)}</p>
+                  <p className="row-day">{dayFormatter.format(hour.time)}</p>
                   <p>{hourFormatter.format(hour.time)}</p>
                </td>
                <td>
@@ -34,19 +34,19 @@ export default function Hourly({hourly}: HourlyProps) {
                </td>
                <td>
                   <p>TEMP</p>
-                  <p>{hour.temp}&deg;C</p>
+                  <p>{hour.temp}<span className="symbol">&deg;C</span></p>
                </td>
                <td>
                   <p>FL TEMP</p>
-                  <p>{hour.apparentTemp}&deg;C</p>
+                  <p>{hour.apparentTemp}<span className="symbol">&deg;C</span></p>
                </td>
                <td>
                   <p>WIND</p>
-                  <p>{hour.windSpeed} mph</p>
+                  <p>{hour.windSpeed} <span className="symbol">mph</span></p>
                </td>
                <td>
                   <p>PRECIP</p>
-                  <p>{hour.precip} in</p>
+                  <p>{hour.precip} <span className="symbol">in</span></p>
                </td>
             </tr>
                )
